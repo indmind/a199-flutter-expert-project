@@ -53,8 +53,8 @@ void main() {
   blocTest<MovieWatchlistCubit, MovieWatchlistState>(
     'should return error when data is unsuccessful',
     build: () {
-      when(mockGetWatchlistMovies.execute())
-          .thenAnswer((_) async => Left(DatabaseFailure("Can't get data")));
+      when(mockGetWatchlistMovies.execute()).thenAnswer(
+          (_) async => const Left(DatabaseFailure("Can't get data")));
       return bloc;
     },
     act: (bloc) => bloc.fetchWatchlistMovies(),

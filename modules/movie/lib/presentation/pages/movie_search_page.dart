@@ -21,14 +21,14 @@ class MovieSearchPage extends StatelessWidget {
               onSubmitted: (query) {
                 context.read<MovieSearchCubit>().fetchMovieSearch(query);
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: 'Search title',
                 prefixIcon: Icon(Icons.search),
                 border: OutlineInputBorder(),
               ),
               textInputAction: TextInputAction.search,
             ),
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
             Text(
               'Search Result',
               style: kHeading6,

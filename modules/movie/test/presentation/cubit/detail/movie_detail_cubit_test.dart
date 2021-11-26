@@ -199,7 +199,7 @@ void main() {
         'should update watchlist message when add watchlist failed',
         build: () {
           when(mockSaveWatchlist.execute(testMovieDetail))
-              .thenAnswer((_) async => Left(DatabaseFailure('Failed')));
+              .thenAnswer((_) async => const Left(DatabaseFailure('Failed')));
           when(mockGetWatchlistStatus.execute(testMovieDetail.id))
               .thenAnswer((_) async => false);
           return bloc;
@@ -220,7 +220,7 @@ void main() {
         'should update watchlist message when remove watchlist failed',
         build: () {
           when(mockRemoveWatchlist.execute(testMovieDetail))
-              .thenAnswer((_) async => Left(DatabaseFailure('Failed')));
+              .thenAnswer((_) async => const Left(DatabaseFailure('Failed')));
           when(mockGetWatchlistStatus.execute(testMovieDetail.id))
               .thenAnswer((_) async => true);
           return bloc;

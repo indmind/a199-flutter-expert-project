@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:core/core.dart';
 import 'package:flutter/cupertino.dart';
@@ -26,15 +28,15 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: AppDrawer(),
+      drawer: const AppDrawer(),
       appBar: AppBar(
-        title: Text('Movies'),
+        title: const Text('Movies'),
         actions: [
           IconButton(
             onPressed: () {
               Navigator.pushNamed(context, MOVIE_SEARCH_ROUTE);
             },
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
           )
         ],
       ),
@@ -54,13 +56,13 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                 builder: (context, data) {
                   final state = data.nowPlayingState;
                   if (state == RequestState.Loading) {
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(),
                     );
                   } else if (state == RequestState.Loaded) {
                     return MovieList(data.nowPlayingMovies);
                   } else {
-                    return Text('Failed');
+                    return const Text('Failed');
                   }
                 },
               ),
@@ -74,13 +76,13 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                 builder: (context, data) {
                   final state = data.popularMoviesState;
                   if (state == RequestState.Loading) {
-                    return Center(
+                    return const Center(
                       child: CircularProgressIndicator(),
                     );
                   } else if (state == RequestState.Loaded) {
                     return MovieList(data.popularMovies);
                   } else {
-                    return Text('Failed');
+                    return const Text('Failed');
                   }
                 },
               ),
@@ -101,7 +103,7 @@ class _HomeMoviePageState extends State<HomeMoviePage> {
                   } else if (state == RequestState.Loaded) {
                     return MovieList(data.topRatedMovies);
                   } else {
-                    return Text('Failed');
+                    return const Text('Failed');
                   }
                 },
               ),
