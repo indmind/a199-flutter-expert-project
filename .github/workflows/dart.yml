@@ -27,6 +27,6 @@ jobs:
     - run: flutter pub get
     - name: Run all tests
       run: |
-        chmod +x ./test-all.ssh
+        chmod +x ./test-all.sh
         ./test-all.sh
       shell: bash
