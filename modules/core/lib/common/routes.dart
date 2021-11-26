@@ -1,3 +1,5 @@
+// ignore_for_file: constant_identifier_names
+
 const MOVIE_HOME_ROUTE = '/movie/home';
 const MOVIE_DETAIL_ROUTE = '/movie/detail';
 const MOVIE_SEARCH_ROUTE = '/movie/search';

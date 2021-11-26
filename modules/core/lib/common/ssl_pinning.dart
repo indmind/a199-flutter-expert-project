@@ -1,4 +1,4 @@
-import 'package:ditonton/common/shared.dart';
+import 'package:core/common/shared.dart';
 import 'package:http/http.dart' as http;
 
 // Source: https://www.dicoding.com/academies/199/discussions/136107
