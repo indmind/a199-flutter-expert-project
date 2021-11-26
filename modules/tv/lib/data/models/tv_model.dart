@@ -24,7 +24,7 @@ class TvModel extends Equatable {
   late final String? backdropPath;
   late final num voteAverage;
   late final String overview;
-  late final String firstAirDate;
+  late final String? firstAirDate;
   late final List<String> originCountry;
   late final List<int> genreIds;
   late final String originalLanguage;
