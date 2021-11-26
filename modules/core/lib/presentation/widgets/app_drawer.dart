@@ -19,29 +19,29 @@ class AppDrawer extends StatelessWidget {
             accountEmail: Text('ditonton@dicoding.com'),
           ),
           ListTile(
-            leading: Icon(Icons.movie),
-            title: Text('Movies'),
+            leading: const Icon(Icons.movie),
+            title: const Text('Movies'),
             onTap: () {
               Navigator.pushReplacementNamed(context, MOVIE_HOME_ROUTE);
             },
           ),
           ListTile(
-            leading: Icon(Icons.tv),
-            title: Text('Tv Shows'),
+            leading: const Icon(Icons.tv),
+            title: const Text('Tv Shows'),
             onTap: () {
               Navigator.pushReplacementNamed(context, TV_HOME_ROUTE);
             },
           ),
           ListTile(
-            leading: Icon(Icons.save_alt),
-            title: Text('Movies Watchlist'),
+            leading: const Icon(Icons.save_alt),
+            title: const Text('Movies Watchlist'),
             onTap: () {
               Navigator.pushNamed(context, MOVIE_WATCHLIST_ROUTE);
             },
           ),
           ListTile(
-            leading: Icon(Icons.save_alt),
-            title: Text('Tvs Watchlist'),
+            leading: const Icon(Icons.save_alt),
+            title: const Text('Tvs Watchlist'),
             onTap: () {
               Navigator.pushNamed(context, TV_WATCHLIST_ROUTE);
             },
@@ -50,8 +50,8 @@ class AppDrawer extends StatelessWidget {
             onTap: () {
               Navigator.pushNamed(context, ABOUT_ROUTE);
             },
-            leading: Icon(Icons.info_outline),
-            title: Text('About'),
+            leading: const Icon(Icons.info_outline),
+            title: const Text('About'),
           ),
         ],
       ),

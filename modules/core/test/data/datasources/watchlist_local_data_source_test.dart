@@ -19,7 +19,7 @@ void main() {
         WatchlistLocalDataSourceImpl(databaseHelper: mockDatabaseHelper);
   });
 
-  final testMovieTable = WatchlistTable(
+  const testMovieTable = WatchlistTable(
     id: 1,
     title: 'title',
     posterPath: 'posterPath',
@@ -33,7 +33,7 @@ void main() {
     'title': 'title',
   };
 
-  final testTvTable = WatchlistTable(
+  const testTvTable = WatchlistTable(
     id: 2,
     title: 'test',
     posterPath: 'test',
@@ -96,7 +96,7 @@ void main() {
   });
 
   group('Get Movie Detail By Id', () {
-    final tId = 1;
+    const tId = 1;
 
     test('should return Movie Detail Table when data is found', () async {
       // arrange
