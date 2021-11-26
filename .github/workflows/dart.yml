@@ -25,4 +25,8 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: ./test-all.ssh
+    - name: Run all tests
+      run: |
+        chmod +x ./test-all.ssh
+        ./test-all.sh
+      shell: bash
