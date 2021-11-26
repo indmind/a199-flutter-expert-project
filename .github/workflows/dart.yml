@@ -30,6 +30,7 @@ jobs:
         chmod +x ./test-all.sh
         ./test-all.sh
       shell: bash
+    - run: flutter build apk
     - uses: codecov/codecov-action@v2
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
