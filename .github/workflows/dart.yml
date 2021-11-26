@@ -30,3 +30,7 @@ jobs:
         chmod +x ./test-all.sh
         ./test-all.sh
       shell: bash
+    - uses: codecov/codecov-action@v2
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        files: ./coverage/lcov.info
